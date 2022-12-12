@@ -32,5 +32,5 @@ public class QueryResult {
 
     private Object diagnosticInfo;
 
-    private String languageCode;
+    private String languageCode = "en";
 }
