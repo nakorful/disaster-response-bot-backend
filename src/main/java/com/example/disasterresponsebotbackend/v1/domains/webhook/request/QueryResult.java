@@ -16,7 +16,7 @@ public class QueryResult {
 
     private String queryText;
 
-    private Map<String, String> parameters = new HashMap<>(5);
+    private Map<String, Object> parameters = new HashMap<>(5);
 
     private boolean allRequiredParamsPresent;
 
