@@ -30,7 +30,7 @@ public class IntentProcessingController {
         FulfillmentMessage fulfillmentMessage = new FulfillmentMessage();
 
         FulfillmentMessageText text = new FulfillmentMessageText();
-        text.setText(Collections.singletonList("Yo. Woho y3?"));
+        text.setText(Collections.singletonList("https://www.google.com/maps/dir//5.7405146,-0.0093277/"));
 
         fulfillmentMessage.setText(text);
 
