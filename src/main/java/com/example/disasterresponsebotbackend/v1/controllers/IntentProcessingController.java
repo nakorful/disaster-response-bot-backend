@@ -49,7 +49,7 @@ public class IntentProcessingController {
 
         FulfillmentMessageText text = new FulfillmentMessageText();
 //        text.setText(Collections.singletonList("https://www.google.com/maps/dir//5.7405146,-0.0093277/"));
-        text.setText(Collections.singletonList(mapUrl));
+        text.setText(Collections.singletonList("https://www.google.com/maps/embed/v1/place?q=place_id:Eh5Uc2UgQWRkbyBIaWdoIFN0LCBBY2NyYSwgR2hhbmEiLiosChQKEgn51RwMN4XfDxE8_2KVKNnuiBIUChIJc6e3soSQ3w8R0y0OZdhO0b4&key=AIzaSyAiRVr85_YTnZPSo-FRMSNJlB4PUUYrSOs"));
 
         fulfillmentMessage.setText(text);
 
