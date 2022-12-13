@@ -16,5 +16,5 @@ public class OutputContext {
 
     private long lifespanCount;
 
-    private Map<String, String> parameters = new HashMap<>(5);
+    private Map<String, Object> parameters = new HashMap<>(5);
 }
