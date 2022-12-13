@@ -27,10 +27,29 @@ public class IntentProcessingController {
 
         response.setStatus(200);
 
+
+        String location = "New York, NY";
+
+        // Set the size for the map image
+        String size = "600x300";
+
+        // Set the zoom level for the map
+        int zoom = 12;
+
+        // Construct the URL for the static map image
+        String mapUrl = String.format("https://maps.googleapis.com/maps/api/staticmap?center=%s&size=%s&zoom=%s", location, size, zoom);
+
+// Use the URL to generate the map image
+//        let mapImage = `<img src="${mapUrl}" />`;
+
+// Include the map image in the response
+//        let response = `Here is a map of ${location}: ${mapImage}`;
+
         FulfillmentMessage fulfillmentMessage = new FulfillmentMessage();
 
         FulfillmentMessageText text = new FulfillmentMessageText();
-        text.setText(Collections.singletonList("https://www.google.com/maps/dir//5.7405146,-0.0093277/"));
+//        text.setText(Collections.singletonList("https://www.google.com/maps/dir//5.7405146,-0.0093277/"));
+        text.setText(Collections.singletonList(mapUrl));
 
         fulfillmentMessage.setText(text);
 
