@@ -63,7 +63,10 @@ public class IntentProcessingController {
         fulfillmentMessage.setCard(card);
 
         WebhookResponse webhookResponse = new WebhookResponse();
-        webhookResponse.setFulfillmentMessages(Collections.singletonList(fulfillmentMessage));
+
+        TelegramWebhookResponse telegram = new TelegramWebhookResponse();
+        telegram.setPhoto("https://maps.googleapis.com/maps/api/staticmap?zoom=16&size=900x600&maptype=satellite&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyAiRVr85_YTnZPSo-FRMSNJlB4PUUYrSOs&scale=2");
+//        webhookResponse.setFulfillmentMessages(Collections.singletonList(fulfillmentMessage));
 
         return webhookResponse;
     }

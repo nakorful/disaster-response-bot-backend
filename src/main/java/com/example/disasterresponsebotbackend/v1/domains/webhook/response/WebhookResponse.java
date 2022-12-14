@@ -14,4 +14,6 @@ import java.util.List;
 public class WebhookResponse {
 
     private List<FulfillmentMessage> fulfillmentMessages;
+
+    private TelegramWebhookResponse telegram;
 }
