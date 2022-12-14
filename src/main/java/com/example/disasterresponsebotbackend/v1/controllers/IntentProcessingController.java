@@ -52,7 +52,7 @@ public class IntentProcessingController {
         Card card = new Card();
         card.setTitle("card title");
         card.setSubtitle("card text");
-        card.setImageUri(mapUrl);
+        card.setImageUri("https://images.pexels.com/photos/13716813/pexels-photo-13716813.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
 
         Button button = new Button();
         button.setText("button text");
