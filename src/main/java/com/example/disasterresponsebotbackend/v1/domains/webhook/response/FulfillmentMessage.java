@@ -9,5 +9,7 @@ public class FulfillmentMessage {
 
     private FulfillmentMessageText text;
 
+    private TelegramWebhookResponse telegram;
+
     private Card card;
 }
