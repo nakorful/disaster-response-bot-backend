@@ -1,9 +1,7 @@
 package com.example.disasterresponsebotbackend.v1.controllers;
 
 import com.example.disasterresponsebotbackend.v1.domains.webhook.request.WebhookRequest;
-import com.example.disasterresponsebotbackend.v1.domains.webhook.response.FulfillmentMessage;
-import com.example.disasterresponsebotbackend.v1.domains.webhook.response.FulfillmentMessageText;
-import com.example.disasterresponsebotbackend.v1.domains.webhook.response.WebhookResponse;
+import com.example.disasterresponsebotbackend.v1.domains.webhook.response.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -49,9 +47,20 @@ public class IntentProcessingController {
 
         FulfillmentMessageText text = new FulfillmentMessageText();
 //        text.setText(Collections.singletonList("https://www.google.com/maps/dir//5.7405146,-0.0093277/"));
-        text.setText(Collections.singletonList("<iframe width=\"600\" height=\"450\" style=\"border:0\" loading=\"lazy\" allowfullscreen src=\"https://www.google.com/maps/embed/v1/place?q=place_id:Eh5Uc2UgQWRkbyBIaWdoIFN0LCBBY2NyYSwgR2hhbmEiLiosChQKEgn51RwMN4XfDxE8_2KVKNnuiBIUChIJc6e3soSQ3w8R0y0OZdhO0b4&key=AIzaSyAiRVr85_YTnZPSo-FRMSNJlB4PUUYrSOs\"></iframe>"));
+//        text.setText(Collections.singletonList("<iframe width=\"600\" height=\"450\" style=\"border:0\" loading=\"lazy\" allowfullscreen src=\"https://www.google.com/maps/embed/v1/place?q=place_id:Eh5Uc2UgQWRkbyBIaWdoIFN0LCBBY2NyYSwgR2hhbmEiLiosChQKEgn51RwMN4XfDxE8_2KVKNnuiBIUChIJc6e3soSQ3w8R0y0OZdhO0b4&key=AIzaSyAiRVr85_YTnZPSo-FRMSNJlB4PUUYrSOs\"></iframe>"));
 
-        fulfillmentMessage.setText(text);
+        Card card = new Card();
+        card.setTitle("card title");
+        card.setSubtitle("card text");
+        card.setImageUri(mapUrl);
+
+        Button button = new Button();
+        button.setText("button text");
+
+        card.setButtons(Collections.singletonList(button));
+
+//        fulfillmentMessage.setText(text);
+        fulfillmentMessage.setCard(card);
 
         WebhookResponse webhookResponse = new WebhookResponse();
         webhookResponse.setFulfillmentMessages(Collections.singletonList(fulfillmentMessage));
