@@ -15,5 +15,5 @@ public class WebhookRequest {
 
     private QueryResult queryResult;
 
-    private Object originalDetectIntentRequest;
+    private OriginalDetectIntentRequest originalDetectIntentRequest;
 }

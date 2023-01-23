@@ -5,14 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Getter
 @Setter
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FulfillmentMessageText {
+public class OriginalDetectIntentRequestPayload {
 
-    private List<String> text = new ArrayList<>(5);
+    private OriginalDetectIntentRequestPayloadData data;
 }
