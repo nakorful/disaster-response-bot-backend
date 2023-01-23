@@ -1,5 +1,7 @@
 package com.example.disasterresponsebotbackend.v1.controllers;
 
+import com.example.disasterresponsebotbackend.v1.domains.webhook.request.Intent;
+import com.example.disasterresponsebotbackend.v1.domains.webhook.request.QueryResult;
 import com.example.disasterresponsebotbackend.v1.domains.webhook.request.WebhookRequest;
 import com.example.disasterresponsebotbackend.v1.domains.webhook.response.*;
 import org.slf4j.Logger;
@@ -22,6 +24,19 @@ public class IntentProcessingController {
         String requestId = request.getSession().getId();
         logger.info("[ " + requestId + " ] about to process request to return google map to dialogflow.");
         logger.info("[ " + requestId + " ] webhook request payload:\n " + webhookRequest);
+
+        if (webhookRequest != null) {
+            QueryResult queryResult = webhookRequest.getQueryResult();
+            Intent intent = (queryResult != null) ? queryResult.getIntent() : null;
+
+            if (intent != null) {
+                String intentDisplayName = intent.getDisplayName();
+
+                switch (intentDisplayName) {
+                    case "enter-manager-id":
+                }
+            }
+        }
 
         response.setStatus(200);
 
@@ -75,5 +90,9 @@ public class IntentProcessingController {
 
 //        webhookResponse.setTelegram(telegram);
         return webhookResponse;
+    }
+
+    private void nothing() {
+
     }
 }
