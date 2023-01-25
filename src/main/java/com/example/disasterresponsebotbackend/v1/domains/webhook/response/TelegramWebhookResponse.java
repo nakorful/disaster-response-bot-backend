@@ -10,6 +10,8 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TelegramWebhookResponse {
 
+    private String text;
+
     private String photo;
 
     private String caption;
