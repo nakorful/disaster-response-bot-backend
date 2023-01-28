@@ -125,8 +125,8 @@ public class IntentProcessingController {
 
 //        fulfillmentMessage.setTelegram(telegram);
             fulfillmentMessage.setText(text);
-//            webhookResponse.setFulfillmentMessages(Collections.singletonList(fulfillmentMessage));
-            webhookResponse.setTelegram(telegram);
+            webhookResponse.setFulfillmentMessages(Collections.singletonList(fulfillmentMessage));
+//            webhookResponse.setTelegram(telegram);
 
 //        webhookResponse.setTelegram(telegram);
         }
