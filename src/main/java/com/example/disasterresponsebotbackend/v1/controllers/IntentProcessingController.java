@@ -67,7 +67,7 @@ public class IntentProcessingController {
                             }
 
                             if (managerIdExists) {
-                                responseMessage = String.format("Manager %s, here are the reported outages over the last 10 days.", firstName);
+                                responseMessage = String.format("Manager %s, how can I help you?", firstName);
                             } else {
                                 // todo: send a response to the user and tell him that manager id he entered does not exist
                                 responseMessage = "The id you entered does not exist.";
